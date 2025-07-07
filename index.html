@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=460, initial-scale=1.0" />
-    <title>Calculator with Hamburger</title>
-    <link rel="stylesheet" href="main.css" />
+    <title>Calculator with Hamburger (Small Size)</title>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -12,62 +12,40 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="container">
-      <div class="container-controls">
-        <div class="hamburger">
+  <body
+    class="font-sans bg-gray-100 flex justify-center items-center min-h-screen"
+  >
+    <div
+      class="container w-[460px] bg-black rounded-xl shadow-md p-4 text-white"
+    >
+      <div class="container-controls flex flex-col gap-4">
+        <div
+          class="hamburger text-[#f0a608] text-xl cursor-pointer select-none"
+        >
           <i class="fa-solid fa-bars"></i>
         </div>
-        <div class="screen">
-          <div class="history" data-history></div>
-          <div class="current" data-current>0</div>
+        <div
+          class="screen bg-black px-4 py-2 rounded-xl min-h-[45px] flex flex-col justify-center break-words"
+        >
+          <div
+            class="history text-[0.6rem] text-gray-400 min-h-[12px] text-right select-none"
+            data-history
+          ></div>
+          <div
+            class="current text-[1.75rem] font-bold text-right min-h-[22px] select-none whitespace-nowrap overflow-x-auto"
+            data-current
+          >
+            0
+          </div>
         </div>
       </div>
 
-      <div class="calc-buttons">
-        <button class="btn btn-clear" data-btn-clear>AC</button>
-        <button class="btn btn-plus-minus" data-btn-plus-minus>+/-</button>
-        <button class="btn btn-percent" data-btn-percent>%</button>
-        <button class="btn btn-operation" data-btn-operation data-value="/">
-          ÷
-        </button>
-
-        <button class="btn btn-number" data-btn-number data-value="7">7</button>
-        <button class="btn btn-number" data-btn-number data-value="8">8</button>
-        <button class="btn btn-number" data-btn-number data-value="9">9</button>
-        <button class="btn btn-operation" data-btn-operation data-value="*">
-          ×
-        </button>
-
-        <button class="btn btn-number" data-btn-number data-value="4">4</button>
-        <button class="btn btn-number" data-btn-number data-value="5">5</button>
-        <button class="btn btn-number" data-btn-number data-value="6">6</button>
-        <button class="btn btn-operation" data-btn-operation data-value="-">
-          -
-        </button>
-
-        <button class="btn btn-number" data-btn-number data-value="1">1</button>
-        <button class="btn btn-number" data-btn-number data-value="2">2</button>
-        <button class="btn btn-number" data-btn-number data-value="3">3</button>
-        <button class="btn btn-operation" data-btn-operation data-value="+">
-          +
-        </button>
-
-        <button class="btn btn-delete" data-btn-delete>
-          <i class="fa-solid fa-delete-left"></i>
-        </button>
-        <button class="btn btn-number" data-btn-number data-value="0">0</button>
-        <button
-          class="btn btn-decimalpoint"
-          data-btn-decimalpoint
-          data-value="."
-        >
-          .
-        </button>
-        <button class="btn btn-equal" data-btn-equal>=</button>
-      </div>
+      <div class="calc-buttons mt-4 grid grid-cols-4 gap-2"></div>
     </div>
-    <script src="script.js"></script>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
